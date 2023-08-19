@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="p-12">
+    <header>
+        <nav>
+            <div class="navbar lg:felx bg-indigo-100 px-10 h-20 rounded-lg ">
+                <div class="lg:flex-1 grid grid-cols-1">
+                  <p class="block text-3xl font-semibold">Interactive</p>
+                  <p class="block text-xl">Geometry Genius</p>
+                </div>
+                <a class="btn bg-primaryColor hover:bg-blue-700 text-white lg:flex-none px-9 py-2">Blog</a>
+            </div>
+        </nav>
+    </header>
+    <main class="mt-12">
+        <section class="flex">
+            <div>
+                <!-- card-1 -->
+                <div class="card w-96 bg-base-100 shadow-xl p-4 border rounded-lg">
+                    <figure class="px-10 pt-10">
+                      <img src="/images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Triangle</h2>
+                      <div>
+                        <p>Area(A) = 0.5 x b x h</p>
+                        <div class="flex gap-4 my-4">
+                            <div>
+                                <input type="text" placeholder="b" name="" class="w-20 bg-slate-200 pl-4 text-black font-semibold rounded" id="triangle_b">
+                                <span>cm</span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="h" name="" class="w-20 bg-slate-200 pl-4 text-black font-semibold rounded" id="triangle_h">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                        <p id="nan" class="text-red-600"></p>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="w-full btn bg-primaryColor hover:bg-blue-700 text-white" id="input_cal">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="w-[400px] h-[400px] border border-red-800 p-6">
+              <h3 class="text-center underline underline-offset-4">Area Calculation</h3>
+              <ol type="1" id="showing_area">
+
+              </ol>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- own js -->
+    <script src="./triangle.js"></script>
+    <script src="./main.js"></script>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                primaryColor: "#1090D8",
+              }
+            }
+          }
+        }
+      </script>
+    <!-- daisy ui -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
